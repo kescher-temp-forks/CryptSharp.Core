@@ -191,7 +191,7 @@ namespace CryptSharp.Core
 
         private static string Regex
         {
-            get { return @"\A(?<prefix>\$(apr)?1\$)(?<salt>[A-Za-z0-9./]{1,99})(\$(?<crypt>[A-Za-z0-9./]{22}))?\z"; }
+            get { return @"\A(?<prefix>\$(apr)?1\$)(?<salt>[^\$]{1,99})(\$(?<crypt>[A-Za-z0-9./]{22}))?\z"; }
         }
     }
 }
